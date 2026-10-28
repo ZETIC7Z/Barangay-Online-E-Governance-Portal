@@ -10,6 +10,27 @@
 
 ---
 
+## 🎬 Live Demo Preview
+
+<div align="center">
+  <a href="https://github.com/ZETIC7Z/Barangay-Online-E-Governance-Portal/releases/download/v2.0.0/Barangay-Matatag-Live-Demo-1080p.mp4" title="Click to Watch Full 1080p HD Live Demo Video (03:51)">
+    <img src="public/demo/live-demo-preview.gif" alt="Barangay Matatag Smart E-Governance 3D Portal — Live Demo Preview" width="100%" />
+  </a>
+  <br />
+  <p>
+    <a href="https://github.com/ZETIC7Z/Barangay-Online-E-Governance-Portal/releases/download/v2.0.0/Barangay-Matatag-Live-Demo-1080p.mp4">
+      <img src="https://img.shields.io/badge/%E2%96%B6%EF%B8%8F_Watch_Full_1080p_HD_Live_Demo_Video_(03%3A51)-2563EB?style=for-the-badge&logo=youtube&logoColor=white" alt="Watch Full 1080p HD Live Demo Video" />
+    </a>
+    &nbsp;
+    <a href="public/demo/live-demo-preview.mp4">
+      <img src="https://img.shields.io/badge/%F0%9F%93%B9_Open_Repository_MP4_Stream-0F172A?style=for-the-badge" alt="Open Repository MP4 Stream" />
+    </a>
+  </p>
+  <p><em>Full walkthrough covering the 10-second desktop intro cinema, Light/Dark mode transitions, 3D Google Satellite Map with Barangay Matatag KML boundary &amp; live GPS directions, Sangguniang Barangay roster, 3D Events carousel, Historical Archive, Resident Self-Service Portal, floating QR Certificate Printer, and Admin Command Center.</em></p>
+</div>
+
+---
+
 ## 🏛️ System Overview
 
 The **Barangay Matatag Smart E-Governance Digital Portal** is a full-stack, real-time, web-based and multi-platform native system engineered to modernize local government operations in **Barangay Matatag, Lamitan City, Province of Basilan (BARMM 7302)**. It unifies resident self-service, 3D satellite GIS house pinpointing with live turn-by-turn navigation, automated QR-verified certificate issuance, Katarungang Pambarangay (Lupon Tagapamayapa) blotter & subpoena management, community equipment borrowing, live emergency SOS response, and dual-cloud persistence (**MongoDB Atlas** + **Google Drive Vault Sync**).
