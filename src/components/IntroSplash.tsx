@@ -14,6 +14,18 @@ export const shouldPlayIntro = () => {
   const params = new URLSearchParams(window.location.search);
   if (params.get('intro') === '0') return false;
   if (params.get('intro') === '1') return true;
+  // On bandwidth-limited temporary SSH tunnels (.lhr.life / .localhost.run), skip the 4MB MP4
+  // download by default so remote clients see the interactive portal immediately without waiting.
+  const host = window.location.hostname;
+  if (
+    host.endsWith('.lhr.life') ||
+    host.endsWith('.localhost.run') ||
+    host.endsWith('.loca.lt') ||
+    host.includes('pinggy') ||
+    host.includes('serveo')
+  ) {
+    return false;
+  }
   return window.matchMedia('(min-width: 1024px) and (hover: hover) and (pointer: fine)').matches;
 };
 

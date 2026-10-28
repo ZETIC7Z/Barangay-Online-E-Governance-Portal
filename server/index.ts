@@ -1036,17 +1036,24 @@ io.on('connection', (socket) => {
   });
 });
 
-// Serve built frontend in production
+// Serve built frontend in production & remote tunnel preview
 const DIST_PATH = path.resolve('./dist');
-if (fs.existsSync(DIST_PATH)) {
-  app.use(express.static(DIST_PATH));
-  app.get('*', (req, res, next) => {
-    if (req.path.startsWith('/api') || req.path.startsWith('/drive-vault') || req.path.startsWith('/downloads')) {
-      return next();
-    }
-    res.sendFile(path.join(DIST_PATH, 'index.html'));
-  });
-}
+app.use(express.static(DIST_PATH));
+app.get('*', (req, res, next) => {
+  if (
+    req.path.startsWith('/api') ||
+    req.path.startsWith('/drive-vault') ||
+    req.path.startsWith('/downloads') ||
+    req.path.startsWith('/socket.io')
+  ) {
+    return next();
+  }
+  const indexHtml = path.join(DIST_PATH, 'index.html');
+  if (fs.existsSync(indexHtml)) {
+    return res.sendFile(indexHtml);
+  }
+  return next();
+});
 
 if (!process.env.VERCEL) {
   server.listen(PORT, () => {

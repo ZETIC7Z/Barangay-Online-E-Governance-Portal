@@ -1,11 +1,11 @@
 {
-  "seedVersion": "2026-10-28-v4",
+  "seedVersion": "2026-10-28-v5",
   "users": [
     {
       "id": "USR-ADMIN-001",
       "username": "admin@test.com",
       "email": "admin@test.com",
-      "passwordHash": "$2a$10$Uup97kNaoBgrsPyPGi5v2O/H10Gu.3H.bJObfe2hu2RJo3I4QYtM.",
+      "passwordHash": "$2a$10$mxMSx07lCffIqQ0caggVlestgdxiFjCuPio/3iThEa8nJwlLCZYqm",
       "fullName": "Hon. Hulma G. Abdurahman",
       "role": "Admin",
       "position": "Punong Barangay / Chairwoman",
@@ -19,7 +19,7 @@
       "id": "USR-RES-001",
       "username": "resident@gmail.com",
       "email": "resident@gmail.com",
-      "passwordHash": "$2a$10$34rLYEQUNhp5VA8jJCMf7eWFImbzICv3yrkq23Cxas0ttZJVDu4uu",
+      "passwordHash": "$2a$10$dxCVlUAUrovqo0Q1svcdcej6kUJkHpvg2fNUQC3D8/iwMs5gn5XhS",
       "fullName": "Amir K. Kalun",
       "role": "Resident",
       "position": "Registered Resident & Household Head",
@@ -35,7 +35,7 @@
       "id": "USR-STAFF-002",
       "username": "secretary@matatag.gov.ph",
       "email": "secretary@matatag.gov.ph",
-      "passwordHash": "$2a$10$Uup97kNaoBgrsPyPGi5v2O/H10Gu.3H.bJObfe2hu2RJo3I4QYtM.",
+      "passwordHash": "$2a$10$mxMSx07lCffIqQ0caggVlestgdxiFjCuPio/3iThEa8nJwlLCZYqm",
       "fullName": "Taifa A. Mohammad",
       "role": "Secretary",
       "position": "Barangay Secretary",
@@ -48,7 +48,7 @@
       "id": "USR-STAFF-003",
       "username": "treasurer@matatag.gov.ph",
       "email": "treasurer@matatag.gov.ph",
-      "passwordHash": "$2a$10$Uup97kNaoBgrsPyPGi5v2O/H10Gu.3H.bJObfe2hu2RJo3I4QYtM.",
+      "passwordHash": "$2a$10$mxMSx07lCffIqQ0caggVlestgdxiFjCuPio/3iThEa8nJwlLCZYqm",
       "fullName": "Barangay Treasurer",
       "role": "Treasurer",
       "position": "Barangay Treasurer",
@@ -91,16 +91,16 @@
       "residentType": "Alive",
       "verificationStatus": "Verified",
       "pinnedLocation": {
-        "lat": 6.66275,
-        "lng": 122.13485,
+        "lat": 6.66018,
+        "lng": 122.13792,
         "lotLabel": "Lot 14-A • Aguinaldo St. (35m East of Brgy. Matatag Hall)",
         "street": "Aguinaldo Street",
         "purok": "Purok 1 - Aguinaldo Central",
         "confirmedAt": "2026-10-01T10:15:00.000Z"
       },
       "liveLocation": {
-        "lat": 6.66279,
-        "lng": 122.13491,
+        "lat": 6.66019,
+        "lng": 122.13795,
         "accuracy": 4.2,
         "status": "Online • At Home (Aguinaldo St.)",
         "updatedAt": "2026-10-28T08:45:00.000Z"
@@ -141,16 +141,16 @@
       "residentType": "Alive",
       "verificationStatus": "Verified",
       "pinnedLocation": {
-        "lat": 6.66315,
-        "lng": 122.1342,
+        "lat": 6.66118,
+        "lng": 122.13842,
         "lotLabel": "Lot 8-B • Quezon Blvd Commercial Strip",
         "street": "Quezon Boulevard",
         "purok": "Purok 2 - Quezon Blvd Commercial",
         "confirmedAt": "2026-09-14T14:20:00.000Z"
       },
       "liveLocation": {
-        "lat": 6.66318,
-        "lng": 122.13425,
+        "lat": 6.66121,
+        "lng": 122.13845,
         "accuracy": 5,
         "status": "Online • Quezon Blvd.",
         "updatedAt": "2026-10-28T08:30:00.000Z"
@@ -191,16 +191,16 @@
       "residentType": "Alive",
       "verificationStatus": "Verified",
       "pinnedLocation": {
-        "lat": 6.66195,
-        "lng": 122.13535,
-        "lotLabel": "House #29 • P. Cuevas St. (Near Hardam Furigay Colleges)",
+        "lat": 6.65942,
+        "lng": 122.13788,
+        "lotLabel": "House #29 • P. Cuevas St. (South of Brgy. Matatag Hall)",
         "street": "P. Cuevas Street",
         "purok": "Purok 3 - P. Cuevas Academic Zone",
         "confirmedAt": "2026-08-22T09:00:00.000Z"
       },
       "liveLocation": {
-        "lat": 6.66195,
-        "lng": 122.13535,
+        "lat": 6.65942,
+        "lng": 122.13788,
         "accuracy": 3.8,
         "status": "Online • P. Cuevas St.",
         "updatedAt": "2026-10-28T07:50:00.000Z"
@@ -241,16 +241,16 @@
       "residentType": "Alive",
       "verificationStatus": "Verified",
       "pinnedLocation": {
-        "lat": 6.6616,
-        "lng": 122.1341,
+        "lat": 6.66048,
+        "lng": 122.13712,
         "lotLabel": "Compound 4-C • Patikul Street Interior",
         "street": "Patikul Street",
         "purok": "Purok 4 - Patikul Interior Compound",
         "confirmedAt": "2026-09-29T16:10:00.000Z"
       },
       "liveLocation": {
-        "lat": 6.66162,
-        "lng": 122.13414,
+        "lat": 6.66051,
+        "lng": 122.13715,
         "accuracy": 6.1,
         "status": "Online • Patikul St.",
         "updatedAt": "2026-10-28T08:12:00.000Z"
@@ -291,16 +291,16 @@
       "residentType": "Alive",
       "verificationStatus": "Verified",
       "pinnedLocation": {
-        "lat": 6.66345,
-        "lng": 122.13555,
+        "lat": 6.66155,
+        "lng": 122.13878,
         "lotLabel": "Unit 3 • Rizal Ave. near Datu Kalun Monument",
         "street": "Rizal Avenue",
         "purok": "Purok 5 - Kalun Triangle / Plaza Periphery",
         "confirmedAt": "2026-10-10T11:30:00.000Z"
       },
       "liveLocation": {
-        "lat": 6.66348,
-        "lng": 122.13559,
+        "lat": 6.66158,
+        "lng": 122.13881,
         "accuracy": 4.5,
         "status": "Online • Rizal Ave.",
         "updatedAt": "2026-10-28T08:50:00.000Z"
@@ -819,8 +819,8 @@
       "type": "Electrical / Utility Hazard",
       "severity": "High",
       "message": "Sparking secondary transformer wire near Compound 4-C on Patikul Street after heavy rain. Requesting immediate BDRRMC & BASELCO crew dispatch.",
-      "lat": 6.66162,
-      "lng": 122.13414,
+      "lat": 6.66051,
+      "lng": 122.13715,
       "address": "Compound 4-C, Patikul Street, Purok 4, Barangay Matatag, Lamitan City",
       "photoUrl": null,
       "status": "Responding (BPAT & BASELCO En Route)",
@@ -913,16 +913,6 @@
     }
   ],
   "activityLogs": [
-    {
-      "id": "LOG-1793204774250-A4E",
-      "user": "resident@gmail.com",
-      "role": "Resident",
-      "action": "LOGIN",
-      "module": "Authentication",
-      "description": "User Amir K. Kalun logged in",
-      "ipAddress": "127.0.0.1",
-      "timestamp": "2026-10-28T16:26:14.250Z"
-    },
     {
       "id": "LOG-001",
       "user": "admin@test.com",
