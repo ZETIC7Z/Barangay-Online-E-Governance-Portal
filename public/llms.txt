@@ -1,0 +1,10 @@
+# Barangay Matatag Smart E-Governance Portal (Lamitan City, Basilan, BARMM 7302)
+
+> Official Smart Barangay E-Governance System of Barangay Matatag, Lamitan City, Province of Basilan (BARMM, ZIP 7302), headed by Punong Barangay Hon. Hulma G. Abdurahman. Developed by Sam Pangilinan (ZETICUZ).
+
+## Core Capabilities
+- **24/7 Document Request & Zero-Login Tracking**: Request Barangay Clearance, Certificate of Indigency, Certificate of Residency, Business Permit Endorsement, Good Moral Character, and Solo Parent Certificate with 10-character tracking codes (`MTG-XXXXXX`) and cryptographic QR verification.
+- **3D Google Satellite Map & Live Turn-by-Turn Directions**: Exact Barangay Matatag boundary polygon with Barangay Hall at `6.6599999° N, 122.1377029° E`, inside-boundary house pinpointing, real-time GPS route tracking to Barangay Hall, and Google Maps app integration.
+- **Katarungang Pambarangay (Lupon Tagapamayapa)**: Digital blotter docketing, mediation/conciliation scheduling, and printable official Subpoena/Summons notices.
+- **Multi-Platform Native Installers**: Windows Desktop Setup Wizard (`.exe`), macOS (`.dmg`), Linux (`.AppImage`), Android (`.apk`), and iOS Edge-to-Edge PWA.
+- **Developer**: Sam Pangilinan (ZETICUZ) — Portfolio: https://www.zeticuz.xyz/

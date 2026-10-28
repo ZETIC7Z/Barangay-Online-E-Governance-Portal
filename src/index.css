@@ -1,0 +1,446 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #f8fafc;
+  color: #0f172a;
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.dark {
+  background-color: #0b1120;
+  color: #f8fafc;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100dvh;
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1), color 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+html.dark body {
+  background-color: #0b1120;
+  color: #f8fafc;
+}
+
+header,
+footer,
+aside,
+section,
+.yakan-glass,
+.yakan-glass-gold,
+.btn-3d-crimson,
+.btn-3d-sapphire,
+.btn-3d-glass {
+  transition:
+    background-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* =========================================================
+   ADAPTIVE LIGHT MODE (DEFAULT) / DARK MODE TYPOGRAPHY & SURFACES
+   ========================================================= */
+
+/* Clean Professional Card Surfaces */
+.yakan-glass {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 1px 3px 0 rgba(15, 23, 42, 0.03);
+}
+
+html.dark .yakan-glass {
+  background: rgba(15, 23, 42, 0.88);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
+}
+
+.yakan-glass-gold {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-top: 3px solid #1d4ed8;
+  box-shadow: 0 8px 25px -4px rgba(15, 23, 42, 0.07);
+}
+
+html.dark .yakan-glass-gold {
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  border-top: 3px solid #2563eb;
+  box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+}
+
+.yakan-weave-bg {
+  background-image: radial-gradient(rgba(29, 78, 216, 0.04) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Clean, Simple Modern Buttons (matching bryg-residentvercelapp.vercel.app) */
+.btn-3d-crimson {
+  background: #b91c1c;
+  color: #ffffff !important;
+  border: 1px solid #991b1b;
+  box-shadow: 0 2px 6px rgba(185, 28, 28, 0.2);
+}
+.btn-3d-crimson:hover {
+  background: #991b1b;
+  box-shadow: 0 4px 12px rgba(185, 28, 28, 0.28);
+}
+
+.btn-3d-sapphire {
+  background: #1d4ed8;
+  color: #ffffff !important;
+  border: 1px solid #1e40af;
+  box-shadow: 0 2px 6px rgba(29, 78, 216, 0.2);
+}
+.btn-3d-sapphire:hover {
+  background: #1e40af;
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.28);
+}
+
+.btn-3d-glass {
+  background: #ffffff;
+  color: #1e293b !important;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.05);
+}
+.btn-3d-glass:hover {
+  background: #f1f5f9;
+  border-color: #94a3b8;
+}
+
+html.dark .btn-3d-glass {
+  background: #1e293b;
+  color: #f8fafc !important;
+  border: 1px solid #334155;
+}
+html.dark .btn-3d-glass:hover {
+  background: #334155;
+}
+
+/* Official Barangay Matatag Seal — Clean & Crisp (NO GLOW) */
+.seal-royal-crest,
+.seal-hero-glow {
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+/* Adaptive Light Mode overrides so zero dark patches remain anywhere in Light Mode */
+html:not(.dark) .text-white {
+  color: #0f172a;
+}
+
+/* Keep white text on intentional solid brand elements in Light Mode */
+html:not(.dark) .btn-3d-crimson,
+html:not(.dark) .btn-3d-crimson *,
+html:not(.dark) .btn-3d-sapphire,
+html:not(.dark) .btn-3d-sapphire *,
+html:not(.dark) .admin-sidebar-blue,
+html:not(.dark) .admin-sidebar-blue *,
+html:not(.dark) .auth-brand-panel,
+html:not(.dark) .auth-brand-panel *,
+html:not(.dark) .setup-wizard-dark-sidebar,
+html:not(.dark) .setup-wizard-dark-sidebar *,
+html:not(.dark) .notif-badge-pill,
+html:not(.dark) .notif-badge-pill *,
+html:not(.dark) .bg-\[\#B91C1C\],
+html:not(.dark) .bg-\[\#B91C1C\] *,
+html:not(.dark) .bg-\[\#1D4ED8\],
+html:not(.dark) .bg-\[\#1D4ED8\] *,
+html:not(.dark) .bg-\[\#1E3A8A\],
+html:not(.dark) .bg-\[\#1E3A8A\] *,
+html:not(.dark) .bg-rose-600,
+html:not(.dark) .bg-rose-600 *,
+html:not(.dark) .bg-blue-600,
+html:not(.dark) .bg-blue-600 *,
+html:not(.dark) .bg-blue-700,
+html:not(.dark) .bg-blue-700 *,
+html:not(.dark) .bg-emerald-600,
+html:not(.dark) .bg-emerald-600 *,
+html:not(.dark) .bg-amber-600,
+html:not(.dark) .bg-amber-600 * {
+  color: #ffffff !important;
+}
+
+/* Preserve ZETICUZ Developer Signature Pill colors in Light & Dark Mode */
+html:not(.dark) .zeticuz-dev-pill {
+  background-color: #0d1117 !important;
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+html:not(.dark) .zeticuz-dev-pill .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+html:not(.dark) .zeticuz-dev-pill .text-slate-500 {
+  color: #64748b !important;
+}
+html:not(.dark) .zeticuz-dev-pill a {
+  color: #ffffff !important;
+}
+
+html:not(.dark) .text-slate-100,
+html:not(.dark) .text-slate-200,
+html:not(.dark) .text-slate-300 {
+  color: #334155;
+}
+
+html:not(.dark) .text-slate-400,
+html:not(.dark) .text-slate-500 {
+  color: #475569;
+}
+
+html:not(.dark) .text-amber-200,
+html:not(.dark) .text-amber-300,
+html:not(.dark) .text-amber-400 {
+  color: #b45309;
+}
+
+html:not(.dark) .text-rose-200,
+html:not(.dark) .text-rose-300,
+html:not(.dark) .text-rose-400 {
+  color: #b91c1c;
+}
+
+html:not(.dark) .text-emerald-200,
+html:not(.dark) .text-emerald-300,
+html:not(.dark) .text-emerald-400 {
+  color: #047857;
+}
+
+html:not(.dark) .text-sky-200,
+html:not(.dark) .text-sky-300,
+html:not(.dark) .text-sky-400,
+html:not(.dark) .text-blue-200,
+html:not(.dark) .text-blue-300,
+html:not(.dark) .text-blue-400 {
+  color: #1d4ed8;
+}
+
+html:not(.dark) .text-indigo-200,
+html:not(.dark) .text-indigo-300,
+html:not(.dark) .text-purple-200,
+html:not(.dark) .text-purple-300 {
+  color: #4338ca;
+}
+
+/* Convert any leftover dark/obsidian containers to clean Light Mode surfaces */
+html:not(.dark) [class*="bg-[#04070E]"],
+html:not(.dark) [class*="bg-[#050811]"],
+html:not(.dark) [class*="bg-[#060913]"],
+html:not(.dark) [class*="bg-[#070B16]"],
+html:not(.dark) [class*="bg-[#080D1A]"],
+html:not(.dark) [class*="bg-[#090F1E]"],
+html:not(.dark) [class*="bg-[#0A1020]"],
+html:not(.dark) [class*="bg-obsidian"] {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) .bg-black\/20,
+html:not(.dark) .bg-black\/25,
+html:not(.dark) .bg-black\/30,
+html:not(.dark) .bg-black\/35,
+html:not(.dark) .bg-black\/40,
+html:not(.dark) .bg-black\/45,
+html:not(.dark) .bg-black\/50,
+html:not(.dark) .bg-black\/60,
+html:not(.dark) .bg-black\/70,
+html:not(.dark) .bg-black\/80,
+html:not(.dark) .bg-white\/5,
+html:not(.dark) .bg-white\/10,
+html:not(.dark) .bg-white\/\[0\.02\],
+html:not(.dark) .bg-white\/\[0\.03\],
+html:not(.dark) .bg-white\/\[0\.04\],
+html:not(.dark) .bg-slate-900,
+html:not(.dark) .bg-slate-900\/40,
+html:not(.dark) .bg-slate-900\/50,
+html:not(.dark) .bg-slate-900\/60,
+html:not(.dark) .bg-slate-900\/70,
+html:not(.dark) .bg-slate-900\/80,
+html:not(.dark) .bg-slate-900\/90,
+html:not(.dark) .bg-slate-950,
+html:not(.dark) .bg-slate-950\/50,
+html:not(.dark) .bg-slate-950\/60,
+html:not(.dark) .bg-slate-950\/70,
+html:not(.dark) .bg-slate-950\/80,
+html:not(.dark) .bg-slate-950\/90,
+html:not(.dark) .bg-slate-800,
+html:not(.dark) .bg-slate-800\/50,
+html:not(.dark) .bg-slate-800\/60,
+html:not(.dark) .bg-slate-800\/70,
+html:not(.dark) .bg-slate-800\/80 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+html:not(.dark) .bg-rose-950\/30,
+html:not(.dark) .bg-rose-950\/40,
+html:not(.dark) .bg-rose-950\/50,
+html:not(.dark) .bg-rose-950\/60,
+html:not(.dark) .bg-rose-900\/30,
+html:not(.dark) .bg-rose-900\/40,
+html:not(.dark) .bg-rose-500\/10,
+html:not(.dark) .bg-rose-500\/15,
+html:not(.dark) .bg-rose-500\/20 {
+  background-color: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+}
+
+html:not(.dark) .bg-amber-950\/30,
+html:not(.dark) .bg-amber-950\/40,
+html:not(.dark) .bg-amber-950\/50,
+html:not(.dark) .bg-amber-500\/10,
+html:not(.dark) .bg-amber-500\/15,
+html:not(.dark) .bg-amber-500\/20 {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+}
+
+html:not(.dark) .bg-emerald-950\/30,
+html:not(.dark) .bg-emerald-950\/40,
+html:not(.dark) .bg-emerald-950\/50,
+html:not(.dark) .bg-emerald-500\/10,
+html:not(.dark) .bg-emerald-500\/15,
+html:not(.dark) .bg-emerald-500\/20 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html:not(.dark) .bg-blue-950\/30,
+html:not(.dark) .bg-blue-950\/40,
+html:not(.dark) .bg-blue-950\/50,
+html:not(.dark) .bg-blue-500\/10,
+html:not(.dark) .bg-blue-500\/15,
+html:not(.dark) .bg-blue-500\/20,
+html:not(.dark) .bg-sky-500\/10,
+html:not(.dark) .bg-sky-500\/15,
+html:not(.dark) .bg-sky-500\/20 {
+  background-color: #eff6ff !important;
+  border-color: #bfdbfe !important;
+}
+
+html:not(.dark) .border-white\/5,
+html:not(.dark) .border-white\/10,
+html:not(.dark) .border-white\/15,
+html:not(.dark) .border-white\/20,
+html:not(.dark) .border-slate-700,
+html:not(.dark) .border-slate-800,
+html:not(.dark) .divide-white\/10 > :not([hidden]) ~ :not([hidden]),
+html:not(.dark) .divide-white\/5 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #e2e8f0;
+}
+
+html:not(.dark) input:not([type="checkbox"]):not([type="radio"]),
+html:not(.dark) select,
+html:not(.dark) textarea {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+html:not(.dark) input.input-match-green:not([type="checkbox"]):not([type="radio"]),
+html:not(.dark) input.input-match-green:not([type="checkbox"]):not([type="radio"]):focus {
+  background-color: #ecfdf5 !important;
+  border-color: #10b981 !important;
+  color: #065f46 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.2) !important;
+}
+
+html.dark input.input-match-green:not([type="checkbox"]):not([type="radio"]),
+html.dark input.input-match-green:not([type="checkbox"]):not([type="radio"]):focus {
+  background-color: rgba(16, 185, 129, 0.14) !important;
+  border-color: #10b981 !important;
+  color: #6ee7b7 !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.25) !important;
+}
+
+html:not(.dark) input:focus,
+html:not(.dark) select:focus,
+html:not(.dark) textarea:focus {
+  border-color: #1d4ed8 !important;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(29, 78, 216, 0.14);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+html.dark ::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+html.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+/* Leaflet map container overrides */
+.leaflet-container {
+  background: #0f172a !important;
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+  border-radius: 0.75rem;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.55s ease;
+}
+
+.satellite-3d-tilt {
+  box-shadow:
+    inset 0 28px 48px -18px rgba(2, 6, 23, 0.45),
+    inset 0 -20px 36px -16px rgba(2, 6, 23, 0.35),
+    0 18px 40px -12px rgba(15, 23, 42, 0.32) !important;
+}
+
+.satellite-3d-tilt .leaflet-tile-pane {
+  filter: contrast(1.06) saturate(1.12);
+}
+
+html:not(.dark) .setup-wizard-dark-sidebar {
+  background-color: #0b132b !important;
+  border-color: #1e293b !important;
+}
+
+/* Printable Certificate & Subpoena Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-certificate-area,
+  #printable-certificate-area * {
+    visibility: visible;
+  }
+  #printable-certificate-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+}
+

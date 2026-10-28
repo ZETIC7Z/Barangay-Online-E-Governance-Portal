@@ -1,0 +1,63 @@
+{
+  "id": "/?source=pwa",
+  "name": "Barangay Matatag Smart E-Governance Portal (Lamitan City, Basilan)",
+  "short_name": "Brgy Matatag",
+  "description": "Official 3D Smart E-Governance Portal for Barangay Matatag, Lamitan City, Basilan Province (ZIP 7302, BARMM). Request clearances, track status, pinpoint your house on 3D satellite map, and access 24/7 emergency response.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["fullscreen", "standalone", "window-controls-overlay"],
+  "orientation": "portrait-primary",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "categories": ["government", "utilities", "productivity"],
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Request Clearance",
+      "short_name": "Request",
+      "description": "File a Barangay Clearance, Residency, Indigency or Business Permit",
+      "url": "/?action=request",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Zero-Login Tracker",
+      "short_name": "Track",
+      "description": "Track your document application using your 10-character code",
+      "url": "/?action=track",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Emergency SOS",
+      "short_name": "SOS",
+      "description": "Send live GPS emergency alert to Barangay Matatag Command Center",
+      "url": "/?action=sos",
+      "icons": [{ "src": "/pwa-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

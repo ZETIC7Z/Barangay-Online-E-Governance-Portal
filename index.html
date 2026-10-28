@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Edge-to-Edge Mobile & iOS Notch/Dynamic Island + No Zoom-In Lock -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <title>Barangay Matatag • Official Smart E-Governance 3D Portal | Lamitan City, Basilan (BARMM 7302)</title>
+    <meta
+      name="description"
+      content="Official Smart Barangay E-Governance 3D Digital Portal of Barangay Matatag, Lamitan City, Basilan Province (BARMM, ZIP 7302). Request Barangay Clearances, Indigency, Residency, Business Permits, track applications with Zero-Login, pinpoint your house in 3D Satellite View, report live emergencies, and connect with Barangay Officials 24/7."
+    />
+    <meta
+      name="keywords"
+      content="Barangay Matatag, Lamitan City, Basilan Province, BARMM, 7302, Smart Barangay, E-Governance, Datu Kalun, Lami-Lamihan, Yakan Tennun, Barangay Clearance, Sam Pangilinan, ZETICUZ"
+    />
+    <meta name="author" content="Sam Pangilinan (ZETICUZ) - https://www.zeticuz.xyz/" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#1D4ED8" />
+    <meta name="background-color" content="#f8fafc" />
+
+    <!-- iOS & Android Full Edge-to-Edge Standalone PWA Meta -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Brgy Matatag" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- Official Barangay Matatag Seal Icons for Browser Tab (.ico & .png), iOS, Android & PWA -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/pwa-192x192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/pwa-512x512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+
+    <!-- Open Graph / Facebook / Messenger Social Share Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Barangay Matatag Smart E-Governance Portal" />
+    <meta property="og:title" content="Barangay Matatag • Smart E-Governance 3D Portal (Lamitan City, Basilan)" />
+    <meta
+      property="og:description"
+      content="Request certificates online, track applications in real-time, pinpoint your home on the 3D Satellite Map, and connect 24/7 with Barangay Matatag, Lamitan City, Basilan Province."
+    />
+    <meta property="og:image" content="/og-banner.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Official 3D Seal of Barangay Matatag, Lamitan City, Basilan Province" />
+
+    <!-- Twitter / X Card Meta -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Barangay Matatag • Smart E-Governance 3D Portal | Lamitan City, Basilan" />
+    <meta
+      name="twitter:description"
+      content="Modern 3D E-Governance Portal woven with Yakan Tennun heritage and the legacy of Datu Kalun (1886). Request clearances, track documents, and access live emergency response."
+    />
+    <meta name="twitter:image" content="/og-banner.png" />
+
+    <!-- Fonts: Space Grotesk, Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Leaflet Satellite GIS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      crossorigin=""
+    />
+
+    <!-- Agentic SEO / AEO JSON-LD Structured Data (GovernmentOrganization + WebApplication) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "GovernmentOrganization",
+            "@id": "https://matatag-lamitan.gov.ph/#organization",
+            "name": "Barangay Matatag Local Government Unit",
+            "alternateName": "Pamahalaang Barangay ng Matatag, Lamitan City, Basilan",
+            "url": "https://matatag-lamitan.gov.ph/",
+            "logo": "/logo.png",
+            "image": "/og-banner.png",
+            "description": "Official Smart Barangay E-Governance Portal of Barangay Matatag, Lamitan City, Province of Basilan (BARMM, ZIP 7302), headed by Punong Barangay Hon. Hulma G. Abdurahman.",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Aguinaldo St., Poblacion Core, Barangay Matatag",
+              "addressLocality": "Lamitan City",
+              "addressRegion": "Basilan, BARMM",
+              "postalCode": "7302",
+              "addressCountry": "PH"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 6.6599999,
+              "longitude": 122.1377029
+            },
+            "telephone": "+63-917-654-7302",
+            "email": "secretariat@matatag-lamitan.gov.ph"
+          },
+          {
+            "@type": "WebApplication",
+            "name": "Barangay Matatag Smart E-Governance Portal",
+            "applicationCategory": "GovernmentApplication",
+            "operatingSystem": "Web, Windows (.exe), macOS (.dmg), Linux (.AppImage), Android (.apk), iOS (PWA)",
+            "creator": {
+              "@type": "Person",
+              "name": "Sam Pangilinan",
+              "alternateName": "ZETICUZ",
+              "url": "https://www.zeticuz.xyz/"
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body class="bg-slate-50 dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 antialiased selection:bg-[#B91C1C] selection:text-white overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // Prevent pinch-zoom & double-tap zoom on iOS & Android PWA for native app feel
+      document.addEventListener('gesturestart', function (e) {
+        e.preventDefault();
+      });
+      document.addEventListener('dblclick', function (e) {
+        e.preventDefault();
+      }, { passive: false });
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js').catch(() => {});
+        });
+      }
+    </script>
+  </body>
+</html>
