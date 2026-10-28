@@ -14,6 +14,9 @@ export default defineConfig({
     port: 5173,
     host: true,
     allowedHosts: true,
+    watch: {
+      ignored: ['**/storage/**', '**/*.exe', '**/_reference_repos/**', '**/dist/**', '**/.git/**'],
+    },
     proxy: {
       '/api': {
         target: 'http://localhost:4000',

@@ -12,7 +12,7 @@
     "dev:client": "vite --port 5173 --host",
     "build": "vite build",
     "build:installers": "node scripts/build-desktop-installer.mjs",
-    "share:tunnel": "ssh -o StrictHostKeyChecking=no -R 80:localhost:5173 nokey@localhost.run",
+    "share:tunnel": "powershell -ExecutionPolicy Bypass -File scripts/start-tunnel.ps1",
     "start": "tsx server/index.ts",
     "typecheck": "tsc --noEmit"
   },

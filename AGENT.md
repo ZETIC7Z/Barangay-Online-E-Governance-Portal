@@ -51,7 +51,13 @@
 - **Core Components**:
   - `src/components/IntroSplash.tsx`: Desktop-only 10.0s edge-to-edge intro video (`/intro/intro.mp4`). Starts fading to `#000000` black at `9.0s`, holds pure black for `1.5s` after `10.0s`, then smoothly fades in the main site.
   - `src/components/Navbar.tsx`: Modern sticky header with Light/Dark mode toggle (Light Mode default), standalone Facebook-style real-time Notification Bell dropdown (visible when logged in), Install App button, and Portal navigation.
-  - `src/components/SatelliteMapPinpointer.tsx`: 3D Google Satellite Hybrid map with dashed blue boundary (`#2563EB`), inside-boundary click enforcement (`isPointInsideMatatagBoundary`), Barangay Matatag Seal marker at `6.6599999, 122.1377029`, Live Turn-by-Turn GPS Directions on Map (OSRM route polyline + distance + driving/walking ETA), and Open in Google Maps App button.
+  - `src/components/SatelliteMapPinpointer.tsx`: 3D Google Satellite Hybrid map (`mt1.google.com/vt/lyrs=y`) featuring:
+    - Enlarged Barangay Hall seal marker (edge-to-edge fit with zero white ring border) at `6.6599999, 122.1377029`.
+    - Inverted mask boundary spotlight: outside area dimmed with dark transparent filter (`fillOpacity: 0.56`) and modern glowing cyan boundary (`#06B6D4` / `#2563EB`); automatically clears to `0` opacity during navigation.
+    - Inside-boundary click enforcement (`isPointInsideMatatagBoundary`).
+    - Google Maps style navigation mode bar (`[Best | Car: 4m | Moto: 4m | Transit: 5m | Walk: 14m | Bike: 6m]`).
+    - Multi-route real-time rendering: Primary fast route (cyan `#06B6D4`) and Alternate scenic route (slate `#64748B`), with floating speech bubble ETA callout badges (`1.0 km • 4 min` / `1.6 km • 6 min`).
+    - Open in native Google Maps App button.
   - `src/components/CertificatePrinterModal.tsx`: Same-page floating QR Certificate modal with **Download to Device** (high-res PNG), **Print Document**, **Wireless Print**, and **Close**.
   - `src/components/SmartAppDownloadModal.tsx`: Interactive Desktop Setup Wizard (`.exe` / `.dmg` / `.AppImage`), Android `.APK`, and iOS PWA installer modal matching the native Windows Setup Wizard UI.
   - `src/components/EventsCoverflowSlider.tsx`: Continuous 3D coverflow slider of Barangay Matatag community events (`public/events/event-1.jpg` to `event-6.jpg`).
@@ -65,3 +71,20 @@
 - **Staff Login**: `secretary@matatag.gov.ph` / `staff123`
 - **Resident Login**: `ahmad.yakan@gmail.com` / `resident123`
 - **Sample Tracking Codes**: `MTG-884920` (Approved Barangay Clearance with floating QR PDF), `MTG-551209` (Certificate of Indigency), `MTG-319402` (Business Permit Endorsement).
+
+---
+
+## 5. Public Live Tunnel (Permanent / Zero Duration Limit)
+- **Active Public URL**: `https://alias-defined-handed-complex.trycloudflare.com`
+- **Target**: `http://127.0.0.1:4000` (Production Express server serving gzipped `dist/` bundle + REST API + Socket.IO)
+- **Mechanism**: Cloudflare Quick Tunnel over HTTP/2 via Singapore Edge (`sin22`).
+- **Binary**: `storage/cloudflared-notime.exe` (Patched Go `crypto/tls` binary to bypass Windows machine clock TLS certificate expiration date checks).
+- **Duration**: **Indefinite / Zero Expiration**. The tunnel remains active as long as the local computer and server process are running; it terminates only when explicitly stopped.
+- **Relaunch Command**:
+  ```powershell
+  npm run share:tunnel
+  # or
+  powershell -ExecutionPolicy Bypass -File scripts/start-tunnel.ps1
+  ```
+- **GitHub Repository**: `https://github.com/ZETIC7Z/Barangay-Online-E-Governance-Portal.git` (Branch: `main`)
+
