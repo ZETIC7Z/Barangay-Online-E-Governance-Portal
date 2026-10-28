@@ -410,6 +410,28 @@
   ],
   "requests": [
     {
+      "id": "REQ-2026-1588",
+      "trackingNumber": "MTG-2026-2991",
+      "shortCode": "MTG2629917",
+      "residentId": "RES-MTG-001",
+      "residentName": "Amir K. Kalun",
+      "contactNumber": "0917-542-1886",
+      "purok": "Purok 1 - Aguinaldo Central",
+      "certificateId": "CERT-001",
+      "documentType": "Barangay Clearance",
+      "purpose": "r4tttet",
+      "fee": 100,
+      "paymentStatus": "Paid",
+      "paymentMethod": "Cash at Brgy Hall",
+      "orNumber": "OR-MTG-2026-2744",
+      "stage": 1,
+      "status": "Pending",
+      "remarks": "Application submitted online. Queued for Barangay Secretary verification.",
+      "businessDetails": null,
+      "dateFiled": "2026-10-28T19:54:41.588Z",
+      "updatedAt": "2026-10-28T19:54:41.588Z"
+    },
+    {
       "id": "REQ-2026-001",
       "trackingNumber": "MTG-2026-8842",
       "shortCode": "MTG268842A",
@@ -505,6 +527,20 @@
     }
   ],
   "payments": [
+    {
+      "id": "PAY-1793217281588",
+      "orNumber": "OR-MTG-2026-2744",
+      "requestId": "REQ-2026-1588",
+      "trackingNumber": "MTG-2026-2991",
+      "residentId": "RES-MTG-001",
+      "residentName": "Amir K. Kalun",
+      "details": "Barangay Clearance Processing Fee",
+      "amount": 100,
+      "mode": "Cash at Brgy Hall",
+      "cashier": "Online Portal Auto-OR",
+      "status": "Verified",
+      "createdAt": "2026-10-28T19:54:41.588Z"
+    },
     {
       "id": "PAY-2026-001",
       "orNumber": "OR-MTG-2026-0941",
@@ -913,6 +949,36 @@
     }
   ],
   "activityLogs": [
+    {
+      "id": "LOG-1793217281613-7E8",
+      "user": "Amir K. Kalun",
+      "role": "Resident",
+      "action": "FILE_REQUEST",
+      "module": "Document Services",
+      "description": "Filed Barangay Clearance (MTG-2026-2991)",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-10-28T19:54:41.613Z"
+    },
+    {
+      "id": "LOG-1793217200547-ZRB",
+      "user": "resident@gmail.com",
+      "role": "Resident",
+      "action": "LOGIN",
+      "module": "Authentication",
+      "description": "User Amir K. Kalun logged in",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-10-28T19:53:20.547Z"
+    },
+    {
+      "id": "LOG-1793217117834-JSW",
+      "user": "admin@test.com",
+      "role": "Admin",
+      "action": "LOGIN",
+      "module": "Authentication",
+      "description": "User Hon. Hulma G. Abdurahman logged in",
+      "ipAddress": "127.0.0.1",
+      "timestamp": "2026-10-28T19:51:57.834Z"
+    },
     {
       "id": "LOG-001",
       "user": "admin@test.com",
